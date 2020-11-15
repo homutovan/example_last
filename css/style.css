@@ -1,0 +1,401 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFPro/SFProDisplay-Bold.woff2");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "GOST UI 2";
+  src: url("../fonts/GOST 2.304 A/GostUI_Regular.TTF");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "GOST UI 2";
+  src: url("../fonts/GOST 2.304 A/GostUI_Bold_G.TTF");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "GOST UI 2";
+  src: url("../fonts/GOST 2.304 A/GostUI_Medium.TTF");
+  font-weight: 600;
+  font-style: normal; }
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #e5e5e5;
+  color: #3b4256;
+  font-family: "GOST UI 2", Arial, sans-serif;
+  font-size: 18px; }
+  body a {
+    text-decoration: none;
+    color: #3684e2; }
+  body .header {
+    background: #3684e2;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0; }
+    body .header span {
+      font-weight: 700; }
+    body .header a {
+      color: #ffffff; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto; }
+  .container .wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px 0; }
+    .container .wrap .login {
+      display: flex;
+      align-items: center; }
+      .container .wrap .login img {
+        opacity: 0.5; }
+      .container .wrap .login .username {
+        padding: 0 28px 0 15px; }
+    .container .wrap .upper-logo {
+      display: flex;
+      align-items: center; }
+      .container .wrap .upper-logo span {
+        margin-left: 21px; }
+  .container .wrapper-steps {
+    max-width: 736px;
+    margin-right: 126px; }
+    .container .wrapper-steps:last-child {
+      padding-top: 40px;
+      padding-bottom: 288px; }
+    .container .wrapper-steps h1 {
+      font-family: "SF Pro Display", Arial, sans-serif;
+      font-size: 48px;
+      line-height: 56px;
+      padding-bottom: 0.5em; }
+    .container .wrapper-steps .step {
+      background-color: #ffffff;
+      margin-bottom: 24px; }
+      .container .wrapper-steps .step .step__header {
+        display: flex;
+        align-items: center; }
+        .container .wrapper-steps .step .step__header .step__title {
+          margin-right: auto;
+          font-family: "SF Pro Display", Arial, sans-serif;
+          font-size: 21px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: 0em; }
+      .container .wrapper-steps .step .attention {
+        align-items: flex-start;
+        background: #fff5e6;
+        padding: 16px 20px 24px 20px;
+        margin-bottom: 16px; }
+        .container .wrapper-steps .step .attention img {
+          padding-right: 16px; }
+
+.step__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: 16px 32px 16px 16px;
+  background-color: #bcc3ca;
+  font-family: "SF Pro Display", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  color: #ffffff;
+  color: #ffffff; }
+
+.step__content {
+  display: none;
+  background: #ffffff;
+  margin-bottom: 24px; }
+  .step__content .btn {
+    background: #0061d9;
+    margin-bottom: 24px;
+    width: 100%;
+    border: none;
+    outline: none; }
+    .step__content .btn .btn-text {
+      display: block;
+      padding: 12px 0;
+      font-family: "GOST UI 2", Arial, sans-serif;
+      font-weight: normal;
+      line-height: 24px;
+      font-size: 18px;
+      color: #3b4256;
+      color: #ffffff; }
+    .step__content .btn:hover {
+      background: #3684e2; }
+
+main {
+  padding-top: 88px; }
+  main .intro {
+    display: flex;
+    padding-top: 64px;
+    border-bottom: 1px solid rgba(59, 66, 86, 0.3); }
+    main .intro p {
+      font-family: "GOST UI 2", Arial, sans-serif;
+      font-weight: normal;
+      line-height: 24px;
+      font-size: 18px;
+      color: #3b4256;
+      padding-bottom: 40px; }
+    main .intro .logo img {
+      margin: 16px 0; }
+    main .intro .logo span {
+      display: block;
+      font-size: medium;
+      font-weight: 700;
+      line-height: 20px; }
+      main .intro .logo span:last-child {
+        font-family: "GOST UI 2", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0em;
+        font-weight: 400; }
+  main form fieldset {
+    border: none; }
+  main form .form-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 448px;
+    margin-left: calc((100% - 448px) / 3);
+    margin-right: calc((100% - 448px) / 3 * 2); }
+    main form .form-box .radio-item {
+      display: block;
+      padding: 16px;
+      margin-bottom: 16px;
+      position: relative; }
+    main form .form-box .radio-item input[type="radio"] {
+      position: absolute;
+      display: block;
+      z-index: -1;
+      opacity: 0;
+      width: 0;
+      height: 0; }
+    main form .form-box .radio-item .radio-text-up {
+      display: inline-block;
+      position: relative;
+      padding: 0 0 0 32px;
+      font-weight: bold; }
+    main form .form-box .radio-item .radio-text-up:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      background: url(../img/radio_no_checked.png) 0 0 no-repeat; }
+    main form .form-box .radio-item input[type="radio"]:checked + .radio-text-up:before {
+      background-image: url(../img/radio_checked.png); }
+    main form .form-box input {
+      max-width: 448px;
+      height: 48px;
+      text-indent: 10px; }
+    main form .form-box .radio {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      width: 1px; }
+      main form .form-box .radio:checked ~ .radio-text-up::before {
+        background-image: url(../img/radio_checked.png); }
+      main form .form-box .radio:checked ~ .check-text::before {
+        background: #0061d9;
+        background-image: url(../img/check_mark.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 15px; }
+    main form .form-box .check {
+      background: #ffffff;
+      box-shadow: 0 0 0 2px #0061d9; }
+    main form .form-box .radio-item:not(.check),
+    main form .form-box .check-item:not(.check) {
+      background: #f5f5f7; }
+    main form .form-box .radio-text-down {
+      padding-left: 32px; }
+    main form .form-box .button {
+      background: #0061d9;
+      margin-bottom: 24px;
+      width: 100%;
+      border: none;
+      outline: none; }
+      main form .form-box .button .btn-text {
+        display: block;
+        padding: 12px 0;
+        font-family: "GOST UI 2", Arial, sans-serif;
+        font-weight: normal;
+        line-height: 24px;
+        font-size: 18px;
+        color: #3b4256;
+        color: #ffffff; }
+      main form .form-box .button:hover {
+        background: #3684e2; }
+    main form .form-box legend {
+      line-height: 24px;
+      color: #3b4256;
+      font-weight: bold;
+      font-family: "GOST UI 2", Arial, sans-serif;
+      font-size: 18px;
+      margin-bottom: 16px;
+      padding-top: 8px; }
+    main form .form-box .form-group {
+      background: #ffffff;
+      margin-bottom: 16px; }
+      main form .form-box .form-group .form-item {
+        font-family: "GOST UI 2", Arial, sans-serif;
+        font-weight: normal;
+        line-height: 24px;
+        font-size: 18px;
+        color: #3b4256; }
+      main form .form-box .form-group .field {
+        width: -webkit-fill-available;
+        border: 1px solid rgba(59, 66, 86, 0.5);
+        margin-top: 8px; }
+    main form .form-box .document {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      main form .form-box .document p {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column; }
+      main form .form-box .document input[type="text"] {
+        width: 100vh; }
+      main form .form-box .document input[name="series"] {
+        width: 160px; }
+      main form .form-box .document input[name="number"] {
+        width: 256px; }
+    main form .form-box .issue-date .wrap-date {
+      display: flex; }
+      main form .form-box .issue-date .wrap-date label {
+        color: #848e99; }
+      main form .form-box .issue-date .wrap-date .field:not([name="year"]) {
+        width: 120px;
+        margin-right: 16px; }
+      main form .form-box .issue-date .wrap-date input[name="year"] {
+        width: 176px; }
+    main form .form-box h3 {
+      line-height: 24px;
+      color: #3b4256;
+      font-weight: bold;
+      font-family: "GOST UI 2", Arial, sans-serif;
+      font-size: 18px; }
+    main form .form-box .consent {
+      margin-bottom: 24px; }
+      main form .form-box .consent li {
+        margin-top: 8px;
+        padding-right: 2px;
+        list-style-position: inside; }
+    main form .form-box .check-item {
+      display: block;
+      padding: 16px;
+      margin-bottom: 16px;
+      position: relative; }
+    main form .form-box .check-item input[type="checkbox"] {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      display: block;
+      width: 0;
+      height: 0; }
+    main form .form-box .check-item span {
+      display: inline-block;
+      position: relative;
+      padding: 0 0 0 32px; }
+    main form .form-box .check-item span:before {
+      content: "";
+      display: inline-block;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url(../img/qube.png) 0 0 no-repeat; }
+    main form .form-box .check-item input[type="checkbox"]:checked + span:before {
+      background-image: url(../img/check_mark.png); }
+    main form .form-box .caution {
+      margin-bottom: 24px; }
+      main form .form-box .caution p {
+        font-family: "GOST UI 2", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0em; }
+    main form .form-box .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px; }
+      main form .form-box .button-group .tinyBtn {
+        width: calc(50% - 32px); }
+      main form .form-box .button-group #whiteBtn {
+        background: #ffffff;
+        box-shadow: 0 0 0 1px #0061d9; }
+        main form .form-box .button-group #whiteBtn:hover {
+          box-shadow: 0 0 0 2px #0061d9; }
+        main form .form-box .button-group #whiteBtn .btn-text {
+          color: #0061d9; }
+  main form #accept {
+    max-width: 556px;
+    margin: 0 calc((100% - 446px) / 3); }
+    main form #accept .accept {
+      margin-bottom: 24px; }
+      main form #accept .accept li {
+        margin-bottom: 8px;
+        list-style-type: none; }
+        main form #accept .accept li span {
+          font-weight: bold; }
+  main .btn-change {
+    display: none; }
+  main .open .step__count {
+    background-color: #0061d9; }
+  main .open .btn-change {
+    display: none; }
+  main .open .step__content {
+    display: block; }
+  main .change .step__count {
+    background-color: #1bc400;
+    background-image: url("../img/check_mark.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px; }
+    main .change .step__count span {
+      display: none; }
+  main .change .btn-change {
+    font-family: "GOST UI 2", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #0061d9;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 16px;
+    margin-left: auto; }
+    main .change .btn-change a {
+      padding-left: 7px;
+      color: #0061d9; }
+  main .change .step__content {
+    display: none; }
+
+.hidden {
+  display: none;
+}
+
+main .done .step__count {
+  background-color: #1bc400;
+  background-image: url("../img/check_mark.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
